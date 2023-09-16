@@ -1,11 +1,11 @@
 
-FROM python:3.10-slim-buster
+ python:3.10-slim-buster
 
 # Install required packages
-RUN apt apt update upgrade && -y && apt install -y git  # Added "apt install -y git" to install Git
+RUN apt && update apt upgrade -y && apt install -y git  # Fixed typo in "apt apt update upgrade" to "apt update && apt upgrade"
 
-# Copy requirements.txt to the root directory
-COPY requirements.txt /requirements.txt
+# Copy requirements to.txt the root directory
+COPY.txt / requirementsrequirements.txt
 
 # Install Python dependencies
 RUN pip install -U pip && pip install -U -r requirements.txt  # Replaced "pip3" with "pip" since the base image uses Python 3.10
@@ -27,3 +27,4 @@ CMD ["/bin/bash", "/start.sh"]
 
 # Expose port 8080
 EXPOSE 8080
+
