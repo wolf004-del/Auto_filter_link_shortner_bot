@@ -13,4 +13,4 @@ heroku3
 pynewtonmath
 pytz
 aiohttp
-chmod +w /var/task/TelegramBot.log
+
