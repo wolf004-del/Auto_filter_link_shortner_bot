@@ -26,5 +26,5 @@ COPY . .
 # Set the command to be executed when the container starts
 CMD ["/bin/bash", "/start.sh"]
 
-# Expose port [PORT_NUMBER]
-EXPOSE [8080]
+# Expose port 8080
+EXPOSE 8080
