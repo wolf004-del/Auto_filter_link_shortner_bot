@@ -2,14 +2,13 @@
 FROM python:3.10-slim-buster
 
 # Install required packages
-RUN apt update && apt upgrade -y
-RUN apt install git -y
+RUN apt apt update upgrade && -y && apt install -y git  # Added "apt install -y git" to install Git
 
 # Copy requirements.txt to the root directory
 COPY requirements.txt /requirements.txt
 
 # Install Python dependencies
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN pip install -U pip && pip install -U -r requirements.txt  # Replaced "pip3" with "pip" since the base image uses Python 3.10
 
 # Create a directory inside the container
 RUN mkdir /Eva
@@ -26,5 +25,5 @@ COPY . .
 # Set the command to be executed when the container starts
 CMD ["/bin/bash", "/start.sh"]
 
-# Expose port [PORT_NUMBER]
+# Expose port 8080
 EXPOSE 8080
