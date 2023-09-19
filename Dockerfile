@@ -31,6 +31,6 @@ COPY . .
 CMD ["/bin/bash", "/start.sh"]
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 5222
 
 
